@@ -14,9 +14,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Hans - Full Stack Developer",
-  description:
-    "Hans的个人网站 | Full Stack Developer | React, Next.js, TypeScript",
+  title: "Hans's HomePage",
+  description: "Hans的个人网站 | Hans's HomePage | Full Stack Developer",
   keywords:
     "全栈开发, 前端开发, React, Next.js, TypeScript, developer, portfolio",
 }
