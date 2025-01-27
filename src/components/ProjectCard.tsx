@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 
 interface ProjectCardProps {
@@ -5,6 +7,7 @@ interface ProjectCardProps {
   description: string
   image: string
   labels?: string[]
+  link?: string
 }
 
 export default function ProjectCard({
@@ -12,9 +15,17 @@ export default function ProjectCard({
   description,
   image,
   labels = [],
+  link,
 }: ProjectCardProps) {
   return (
-    <div className="group relative w-full max-w-sm rounded-xl bg-white p-6 shadow-lg transition-all hover:shadow-xl">
+    <div
+      onClick={() => {
+        if (link) {
+          window.open(link, "_blank")
+        }
+      }}
+      className="cursor-pointer group relative w-full max-w-sm rounded-xl bg-white p-6 shadow-lg transition-all hover:shadow-xl"
+    >
       {/* Image */}
       <div className="relative h-48 overflow-hidden rounded-lg">
         <Image
