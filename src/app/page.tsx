@@ -3,35 +3,33 @@ import SocialIcon from "@/components/SocialIcon"
 import Image from "next/image"
 
 export default function Home() {
-  // const projects = [
-  //   {
-  //     title: "项目 1",
-  //     description: "这是一个关于 React 和 Tailwind CSS 的项目示例。",
-  //     imageUrl: "/webp/carv.webp",
-  //     projectUrl: "https://example.com",
-  //     technologies: ["React", "Tailwind CSS", "JavaScript"],
-  //   },
-  //   {
-  //     title: "项目 2",
-  //     description: "这是一个关于 Node.js 和 Express 的后端项目。",
-  //     imageUrl: "/webp/carv.webp",
-  //     projectUrl: "https://example.com",
-  //     technologies: ["Node.js", "Express", "MongoDB"],
-  //   },
-  // ]
+  const projects = [
+    {
+      title: "Carv",
+      description:
+        "在Carv，为您提供个性化的学习体验，帮助您实现个人和职业发展。",
+      image: "/webp/carv.webp",
+      link: "https://carv.io/",
+      labels: ["React", "Tailwind CSS", "TypeScript", "Material UI"],
+    },
+    {
+      title: "OFF GRID",
+      description:
+        "OFF GRID 是一个去中心化的社交网络，旨在为用户提供一个自由、开放、安全的社交平台。",
+      image: "/svg/logo-branding.svg",
+      link: "https://www.offgrid.day/",
+      labels: [
+        "React",
+        "Next.js",
+        "Expo",
+        "Tailwind CSS",
+        "TypeScript",
+        "Material UI",
+      ],
+    },
+  ]
+
   return (
-    // <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-10">
-    //   <div className="container mx-auto px-4">
-    //     <h1 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-10">
-    //       我的过往项目
-    //     </h1>
-    //     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    //       {projects.map((project, index) => (
-    //         <ProjectCard2 key={index} {...project} />
-    //       ))}
-    //     </div>
-    //   </div>
-    // </div>
     <main className="flex min-h-screen flex-col items-center">
       <div className="w-full max-w-[1000px] flex flex-col p-6">
         {/* Header Section */}
@@ -100,28 +98,16 @@ export default function Home() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ProjectCard
-              title="Carv"
-              link="https://carv.io/"
-              description="在Carv，为您提供个性化的学习体验，帮助您实现个人和职业发展。"
-              image="/webp/carv.webp"
-              labels={["React", "Tailwind CSS", "TypeScript", "Material UI"]}
-            />
-            <ProjectCard
-              title="OFF GRID"
-              link="https://www.offgrid.day/"
-              description=""
-              image="/webp/carv.webp"
-              labels={[
-                "React",
-                "Next.js",
-                "Tailwind CSS",
-                "TypeScript",
-                "Material UI",
-                "React Native",
-                "Expo",
-              ]}
-            />
+            {projects.map(project => (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                link={project.link}
+                description={project.description}
+                image={project.image}
+                labels={project.labels}
+              />
+            ))}
           </div>
         </section>
 
