@@ -19,7 +19,7 @@ a:focus {
 }
 
 :root {
-  --main-bg-color: linear-gradient(45deg, #7fb2e5, white);
+  --main-bg-color: linear-gradient(25deg, #9e77f9, white);
   --main-text-color: #000000;
   --gradient-start: #607df1;
   --gradient-middle: #e0321b;

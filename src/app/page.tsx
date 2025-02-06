@@ -45,18 +45,17 @@ export default function Home() {
           </h1>
 
           <p className="text-xl mt-2">
-            👦 <span className="text-[#2b3ce2] font-extrabold">Full Stack</span>{" "}
-            Developer / Studying at{" "}
-            <span className="text-[#2b3ce2] font-extrabold">Sias</span>
+            👦 <span className="text-[#824DFF] font-extrabold">Full Stack</span>{" "}
+            Developer
           </p>
 
           <p className="text-xl mt-2">
             📝 The only way to do
-            <span className="text-[#2b3ce2] font-extrabold bg-[#f4f4f4] rounded mx-1 px-1.5 py-0.5 text-sm">
+            <span className="text-[#824DFF] font-extrabold bg-[#f4f4f4] rounded mx-1 px-1.5 py-0.5 text-sm">
               great
             </span>
             is to
-            <span className="text-[#2b3ce2] font-extrabold bg-[#f4f4f4] rounded mx-1 px-1.5 py-0.5 text-sm">
+            <span className="text-[#824DFF] font-extrabold bg-[#f4f4f4] rounded mx-1 px-1.5 py-0.5 text-sm">
               love
             </span>
             what you do.
